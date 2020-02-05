@@ -43,7 +43,9 @@ function init() {
 
                 const html = generateHTML({ color, photo, name, location, company, profile, bio, repos, followers, following });
 
-                pdf.create(html, options).toFile('/Assets/example.pdf', function (err, res) {
+                console.log(html);
+
+                pdf.create(html, options).toFile('../Assets/example.pdf', function (err, res) {
                     if (err) return console.log(err);
                     console.log(res);
                 });
